@@ -1,0 +1,12 @@
+node_modules
+.next
+coverage
+dist
+.turbo
+.env
+.env.local
+.DS_Store
+*.tsbuildinfo
+packages/evals/output/
+.corepack/
+.pnpm-store/

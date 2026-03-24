@@ -1,0 +1,27 @@
+{
+  "name": "repostitch",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "pnpm@10.32.1",
+  "scripts": {
+    "dev": "corepack pnpm --filter @repostitch/web dev",
+    "build": "corepack pnpm --filter @repostitch/web build",
+    "eval": "node packages/evals/run.mjs --mode mock",
+    "eval:live": "node packages/evals/run.mjs --mode live",
+    "eval:update": "node packages/evals/run.mjs --mode mock --write-baseline",
+    "test": "vitest run --configLoader native --pool threads --maxWorkers 1",
+    "test:watch": "vitest --configLoader native --pool threads --maxWorkers 1",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "6.9.1",
+    "@testing-library/react": "16.3.2",
+    "@types/node": "25.5.0",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "jsdom": "29.0.1",
+    "typescript": "5.9.3",
+    "vitest": "4.1.0"
+  }
+}
